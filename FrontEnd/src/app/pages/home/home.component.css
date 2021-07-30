@@ -1,0 +1,10 @@
+.home {
+  display: flex;
+}
+.post{
+  flex:9;
+}
+.sidebar {
+  flex:3;
+  
+}

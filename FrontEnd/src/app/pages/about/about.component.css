@@ -1,0 +1,158 @@
+img{
+    width: 100%;
+    height: 500px;
+    
+
+}
+.picsum-img-wrapper{
+ 
+    color: #fff;
+    filter: brightness(.4);
+
+}
+.title{
+    margin-top: 40px;
+font-size: 40px;
+font-weight: 80px;
+text-align: center;
+}
+
+mat-card{
+  margin-top: 20px;
+  margin-left: 80px;
+}
+.carousel-caption{
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+    font-size: 80px;
+    height:80px;
+    z-index: 1;
+    color:#E8FFFF;
+  font-style: italic;
+    
+}
+.text{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    font-family: "Varela Round", Arial, Helvetica, sans-serif;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+    line-height: 30px;
+
+}
+.post {
+    width: 300px;
+    margin: 0px 25px 40px 25px;
+    display: flex;
+    flex-direction: column;
+  flex-flow: row wrap;
+  }
+.post:hover{
+  transform: scale(1.15);
+
+}
+  .postImg {
+    width: 285px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 7px;
+  }
+ 
+  
+  .postInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .postCat {
+    font-family: "Varela Round", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    color: #be9656;
+    line-height: 19px;
+    margin-top: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .postTitle {
+    font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  .postData {
+    font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  
+  .postDate {
+    font-family: "Lora", serif;
+    font-style: italic;
+    font-size: 13px;
+    font-weight: 400;
+    color: #999999;
+    margin-top: 15px;
+  }
+  
+  .postDesc {
+    font-family: "Varela Round", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #444444;
+    margin-top: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+  .posts{
+    flex: "3";
+    display: flex;
+    flex-wrap: wrap;
+}
+.sticky-footer{
+  position: sticky;
+  top: 100%;
+}
+footer{
+  width: 100%;
+  background:black;
+  color: #fff; 
+  display: grid;
+  place-items: center;
+  padding: 2em; 
+  font-size: 1.2rem;
+}
+footer p{
+  padding:0;
+  font-size: 0.8em;
+  color: hsla(0, 50%, 100%, 0.35);
+  margin: 1em 0;
+  font-size: 1rem;
+}
+footer ul{
+  list-style: none;
+  display: flex;
+  margin: 1em 0; 
+}
+footer ul li a{
+  padding: 1em; 
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.904);
+  transition: 100ms;
+}
+footer ul li a:hover{
+  color: var(--primary);
+}

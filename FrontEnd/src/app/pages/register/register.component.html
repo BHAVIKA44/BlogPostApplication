@@ -1,0 +1,20 @@
+
+<div class="register">
+  <div *ngIf="alert" class="alert alert-danger">  
+    <strong>Please enter unique details</strong>   
+  </div>
+    <span class="registerTitle">Register</span>
+    <form (ngSubmit)="f.form.valid && doPost()" class="registerForm" ngNativeValidate #f="ngForm">
+      <label>Username</label>
+      <input class="registerInput" type="text" placeholder="Enter your username..." name="username" [(ngModel)]="username" required #uname="ngModel"/>
+      <label>Email</label>
+      <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="registerInput" type="text" placeholder="Enter your email..." name="email" [(ngModel)]="email" required/>
+      <label>Password</label> 
+      <input class="registerInput" type="password" placeholder="Enter your password..."  name="password" [(ngModel)]="password" required/>
+      
+      <button class="registerButton">Register</button>
+    </form>
+    <a routerLink="/login"style="text-decoration: none; color: inherit" >
+       <button class="registerLoginButton" >Login</button></a>
+  </div>
+          

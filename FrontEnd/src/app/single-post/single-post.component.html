@@ -1,0 +1,88 @@
+
+<div class="singlePost"  ngNativeValidate >
+  <div *ngIf="alert" class="alert alert-danger">  
+    <strong>Please enter unique title</strong>   
+  </div>
+    <div class="singlePostWrapper">
+      <img
+        class="singlePostImg"
+        src= "http://localhost:5000/images/{{li.photo}}"
+        alt=""
+        onerror="this.src='https://wallpapertag.com/wallpaper/full/1/f/f/914282-beautiful-sky-wallpaper-2560x1600-download-free.jpg';"
+      />
+     
+        <div *ngIf="update;else elseBlock">
+          <form (ngSubmit)="f.form.valid && doUpdate()"  ngNativeValidate #f="ngForm">
+
+          <input
+          class="writeInput"
+          placeholder="Title"
+          id="Title"
+          type="text"
+          autoFocus={true}
+          name="title" [(ngModel)]="title"
+        required/>
+        <textarea
+        class="writeInput writeText"
+        placeholder="Write here..."
+        type="text"
+        
+        autoFocus={true}
+        name="desc" [(ngModel)]="desc" required ></textarea>
+        <button class="writeSubmit" type="submit">
+          Update
+        </button>
+      </form>
+       
+        </div>
+        <ng-template #elseBlock>
+          <h1 class="singlePostTitle">
+          {{li.title}}
+        </h1>      
+        <div class="singlePostInfo">
+          <span>
+            Author:
+            <b class="singlePostAuthor">
+              {{li.username}}
+              
+            </b>
+          </span>
+        </div>
+          </ng-template>
+        
+        <div *ngIf="func() &&!update">
+        <div class="singlePostEdit">
+          <i class="singlePostIcon far fa-edit "(click)="updateStatus()"></i>
+          <i class="singlePostIcon far fa-trash-alt"(click)="doDelete()"></i>
+        </div>
+        </div>
+     <div>
+   
+      
+           <div *ngIf="!update">
+
+        <p class="singlePostDesc">
+          {{li.desc}}
+         </p>  
+         </div>
+       
+      </div>
+    
+      
+      
+          <div *ngIf="!update && !func()  && !state()" style="float:'right'" class="rightDist">
+            <button class="writeSubmit" type="submit" (click)="doDisLike()">
+              Dislike
+
+            </button>
+            {{li.dislikes}}
+            </div>
+            <div *ngIf="!update && !func() && !state()" style="float:'right'" class="rightDist">
+              <button class="writeSubmit" type="submit" (click)="doLike()">
+                Like
+              </button>
+              {{li.likes}}
+              </div>
+        
+    </div>
+  </div>

@@ -1,0 +1,39 @@
+
+<div class="post" data-aos="fade-up"   >
+<mat-card> 
+    <img
+      class="postImg"
+      src="http://localhost:5000/images/{{li.photo}}"
+      alt=""
+      onerror="this.src='https://wallpapertag.com/wallpaper/full/1/f/f/914282-beautiful-sky-wallpaper-2560x1600-download-free.jpg';"
+    />
+  
+      <div class="postInfo">
+      <div class="postCats">
+        <div *ngFor="let obj of li.categories">
+        
+            
+          
+        <span class="postCat">
+         
+          {{obj}}
+        
+        </span>
+
+      </div>
+      </div>
+      <span class="postTitle">
+        <a routerLink="/post/{{li._id}}" style="text-decoration: none; color: inherit" >
+       {{li.title}}
+        </a>
+         
+       
+      </span>
+      <hr />
+      <span class="postDate">{{li.createdAt}}</span>
+    </div >
+    <div class="postDesc">
+    {{li.desc}}
+   </div>
+  </mat-card>
+  </div>

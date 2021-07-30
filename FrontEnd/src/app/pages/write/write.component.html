@@ -1,0 +1,38 @@
+<div class="write">
+  <div *ngIf="alert" class="alert alert-danger">  
+    <strong>Please enter unique title</strong>   
+  </div>
+    <img
+      class="writeImg"
+      src="https://www.moneymanifesto.com/wp-content/uploads/2020/07/work-from-home-tools.jpg"
+      alt=""
+    />
+    <form (ngSubmit)="d.form.valid && doPost()" class="writeForm" ngNativeValidate #d="ngForm">
+      <div class="writeFormGroup">
+        <label for="fileInput">
+          <i class="writeIcon fas fa-plus"></i>
+        </label>
+        <input id="fileInput" type="file" style=" display: 'none' " name="photo"  (change)="selectImage($event)" />
+        <input
+          class="writeInput"
+          placeholder="Title"
+          type="text"
+          autoFocus={true}
+          name="title" [(ngModel)]="title"
+        
+        required  />
+      </div>
+      <div class="writeFormGroup">
+        <textarea
+          class="writeInput writeText"
+          placeholder="Write here..."
+          type="text"
+          autoFocus={true}
+          name="desc" [(ngModel)]="desc" required></textarea>
+    
+      </div>
+      <button class="writeSubmit" type="submit" >
+        Publish
+      </button>
+    </form>
+  </div>

@@ -1,0 +1,16 @@
+  
+<div class="login">
+  <div *ngIf="alert" class="alert alert-danger">  
+    <strong>Please enter correct details</strong>   
+  </div>
+    <span class="loginTitle">Login</span>
+    <form  (ngSubmit)="g.form.valid && doPost()" class="loginForm" ngNativeValidate #g="ngForm">
+      <label>UserName</label>
+      <input class="loginInput" type="text" placeholder="Enter your username..."  name="username" [(ngModel)]="username" required />
+      <label>Password</label>
+      <input class="loginInput" type="password" placeholder="Enter your password..." name="password" [(ngModel)]="password"  required/>
+      <button class="loginButton" >Login</button>
+    </form>
+    <a routerLink="/register"style="text-decoration: none; color: inherit" >
+          <button class="loginRegisterButton">Register</button></a>
+  </div>

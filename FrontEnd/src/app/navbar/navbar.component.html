@@ -1,0 +1,58 @@
+<div class="top">
+  <img src="https://i.pinimg.com/736x/5e/b9/24/5eb924aee830d769dff1ad0997a99d25.jpg" />
+    <div class="topLeft">
+    <a   href="https://www.facebook.com/">  <i class="topIcon fab fa-facebook-square"></i></a>
+    <a   href="https://www.instagram.com/">    <i class="topIcon fab fa-instagram-square"></i></a>
+      <a   href="https://www.pinterest.com/"> <i class="topIcon fab fa-pinterest-square"></i></a>
+        <a   href="https://www.twitter.com/"> <i class="topIcon fab fa-twitter-square"></i></a>
+</div>
+<div class="topCenter">
+    <ul class="topList">
+      <li class="topListItem">
+        <a routerLink="/home"style="text-decoration: none; color: inherit" >
+          HOME
+        </a>
+      </li>
+      <li class="topListItem">
+        <a routerLink="/about"style="text-decoration: none; color: inherit" >
+          ABOUT US
+        </a>
+      </li>
+      <div *ngIf="user">
+      <li  class="topListItem">
+        <a routerLink="/myarticles"style="text-decoration: none; color: inherit" >
+          MYARTICLES
+        </a>
+      </li>
+      </div>
+      <div *ngIf="user">
+      <li class="topListItem">
+        <a routerLink="/write" style="text-decoration: none; color: inherit" >
+          NEWPOST
+        </a>
+      </li>
+      </div>
+      <div *ngIf="!user">
+      <li class="topListItem">
+        <a routerLink="/login" style="text-decoration: none; color: inherit" >
+          LOGIN
+        </a>
+      </li>
+      </div>
+      <div *ngIf="!user">
+      <li class="topListItem">
+        <a routerLink="/register" style="text-decoration: none; color: inherit" >
+          REGISTER
+        </a>
+      </li>
+      </div>
+      <div *ngIf="user">
+ <li class="topListItem">
+  <a routerLink="/login" style="text-decoration: none; color: inherit" (click)="logoutUser()" >
+ LOGOUT</a>
+ </li></div>
+
+    </ul>
+  </div>
+ 
+</div>
